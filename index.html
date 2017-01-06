@@ -4,27 +4,24 @@
   <meta charset="UTF-8">
   <title>Key Detection</title>
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <img src="./images/happy.jpg" alt="You did it message with swanky dog picture.">
+
 <script>
 const pressed = [];
-const secretCode = "cat"
-  window.addEventListener('keyup', (e) => {
-    pressed.push(e.key);
-    if (pressed.length > 2) {
-      pizza()
-    }
+const secretCode = "aboo-ajoo";
+const congrats = document.querySelector('img');
+
+window.addEventListener('keyup', (e) => {
+  pressed.push(e.key);
+  pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length)
+  if(pressed.join('').includes(secretCode)) {
+    congrats.style.display = 'flex';
+  }
   })
 
-  function pizza () {
-    const meow = pressed.join('')
-    console.log(meow);
-      if (meow === secretCode) {
-        console.log(true);
-      } else {
-        console.log(false)
-      }
-  }
 </script>
 </body>
 </html>
