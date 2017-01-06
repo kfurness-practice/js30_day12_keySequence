@@ -15,6 +15,9 @@ const secretCode = "aboo-ajoo";
 const congrats = document.querySelector('img');
 
 window.addEventListener('keyup', (e) => {
+  if (congrats.style.display === 'flex') {
+    congrats.style.display = 'none'
+  }
   pressed.push(e.key);
   pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length)
   if(pressed.join('').includes(secretCode)) {
