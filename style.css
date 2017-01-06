@@ -1,3 +1,15 @@
+body {
+  background-color: #1c1c1c;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
 img {
   flex: 1;
   display: none;
